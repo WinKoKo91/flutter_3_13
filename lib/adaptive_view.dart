@@ -102,52 +102,6 @@ class _AdaptiveViewState extends State<AdaptiveView> {
     );
   }
 
-  void onPressed() {
-    if (Platform.isIOS) {
-      showCupertinoDialog(
-        context: context,
-        builder: (context) => CupertinoAlertDialog(
-          content: Text('iOS Dialog'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text("Cancel"),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text("Ok"),
-            ),
-          ],
-        ),
-      );
-    } else {
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          content: const Text('Material Dialog'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text("Cancel"),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text("Ok"),
-            ),
-          ],
-        ),
-      );
-    }
-  }
-
   void onPressedShowDialog() {
     showDialog(
       context: context,
