@@ -16,11 +16,14 @@ class _AdaptiveViewState extends State<AdaptiveView> {
   bool isOn = false;
   bool isCheck = false;
   double slider = 0;
-  late String gender = 'Male';
+  String gender = 'Male';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Adaptive Widgets'),
+      ),
       body: RefreshIndicator.adaptive(
         key: _refreshIndicatorKey,
         onRefresh: () {
