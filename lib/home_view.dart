@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_3_13/adaptive_view.dart';
 import 'package:flutter_3_13/ios_widgets_view.dart';
+import 'package:flutter_3_13/material_widget/material_widget_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -41,6 +42,15 @@ class _HomeViewState extends State<HomeView> {
                           builder: (context) => const IOSWidgetsView()));
                 },
                 child: const Text("iOS Widget"),
+              ),
+              OutlinedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MaterialWidgetView()));
+                },
+                child: const Text("New Property for Material Widget"),
               ),
             ],
           ),
